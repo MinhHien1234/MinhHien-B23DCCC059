@@ -1,4 +1,7 @@
-﻿export default [
+﻿import component from "@/locales/en-US/component";
+import path from "path";
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -16,8 +19,10 @@
 		],
 	},
 
+
 	///////////////////////////////////
 	// DEFAULT MENU
+	
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
@@ -36,6 +41,22 @@
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+	{
+		path: '/to-do',
+		name: 'ToDoList', 
+		icon: 'CheckOutlined',
+		component: '@/pages/TodoPage/index',
+		
+	  },
+	  {
+		path: '/Bai1',
+		name: 'RandomNumbers', 
+		icon: 'CheckOutlined',
+		component: '@/pages/BaiTH01/Bai1-DoanSo',
+		
+	  },
+	  
+	
 
 	// DANH MUC HE THONG
 	// {
@@ -89,4 +110,6 @@
 	{
 		component: './exception/404',
 	},
+	
+	
 ];

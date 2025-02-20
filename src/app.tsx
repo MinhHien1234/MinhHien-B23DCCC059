@@ -16,6 +16,9 @@ import NotFoundContent from './pages/exception/404';
 import type { IInitialState } from './services/base/typing';
 import './styles/global.less';
 import { currentRole } from './utils/ip';
+import TodoPage from './pages/TodoPage';
+
+
 
 /**  loading */
 export const initialStateConfig = {
@@ -97,6 +100,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 					history.replace('/403');
 			}
 		},
+	
 
 		menuItemRender: (item: any, dom: any) => (
 			<a
@@ -117,7 +121,8 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 			<OIDCBounder>
 				<ErrorBoundary>
 					{/* <TechnicalSupportBounder> */}
-					<OneSignalBounder>{dom}</OneSignalBounder>
+					<OneSignalBounder>{dom}
+					</OneSignalBounder>
 					{/* </TechnicalSupportBounder> */}
 				</ErrorBoundary>
 			</OIDCBounder>
